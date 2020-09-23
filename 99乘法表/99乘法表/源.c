@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <windows.h>
+
+//1*1=1
+//1*2=2 2*2=4
+//1*3=3 2*3=6 3*3=9
+
 int main()
 {
-	int a, b, c;
-	for (a = 1; a < 10; a++)
+	int  i, j;
+	for (i = 1; i < 10; i++)
 	{
-		for (b = a; b < 10; b++)
+		for (j = 1; j <= i; j++)
 		{
-			c = a*b;
-			if (b == 9)
-			{
-				printf("%dX%d=%d\n", a, b, c);
-			}
-			if (b < 9)
-			{
-				printf("%dX%d=%d ", a, b, c);
-			}
-			}
+			printf("%ix%d=%-2d ", i, j, i*j);
+		}
+		printf("\n");
 	}
 	system("pause");
 	return 0;
